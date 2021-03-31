@@ -4,7 +4,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/lenovo/jd2019/jd2019-vendor.mk)
+$(call inherit-product, vendor/lenovo/jd2019/jd2019-vendor.mk)
+$(call inherit-product, vendor/lenovo/jd2019/google/google.mk)
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
